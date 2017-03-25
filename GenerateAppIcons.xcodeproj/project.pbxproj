@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		491E13711E87321500807FDE /* +NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E136A1E87321500807FDE /* +NSImage.swift */; };
+		491E13721E87321500807FDE /* +NSSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E136B1E87321500807FDE /* +NSSize.swift */; };
+		491E13731E87321500807FDE /* handleErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E136C1E87321500807FDE /* handleErrors.swift */; };
+		491E13741E87321500807FDE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E136D1E87321500807FDE /* Image.swift */; };
+		491E13751E87321500807FDE /* imageSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E136E1E87321500807FDE /* imageSets.swift */; };
+		491E13761E87321500807FDE /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E136F1E87321500807FDE /* ImageSize.swift */; };
+		491E13771E87321500807FDE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E13701E87321500807FDE /* main.swift */; };
+		491E13791E87325F00807FDE /* generate-app-icons in CopyFiles */ = {isa = PBXBuildFile; fileRef = 491E13601E8731C600807FDE /* generate-app-icons */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		491E135E1E8731C600807FDE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		491E13781E87324500807FDE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/local/bin;
+			dstSubfolderSpec = 0;
+			files = (
+				491E13791E87325F00807FDE /* generate-app-icons in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		491E13601E8731C600807FDE /* generate-app-icons */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "generate-app-icons"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491E136A1E87321500807FDE /* +NSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+NSImage.swift"; sourceTree = "<group>"; };
+		491E136B1E87321500807FDE /* +NSSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+NSSize.swift"; sourceTree = "<group>"; };
+		491E136C1E87321500807FDE /* handleErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = handleErrors.swift; sourceTree = "<group>"; };
+		491E136D1E87321500807FDE /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		491E136E1E87321500807FDE /* imageSets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageSets.swift; sourceTree = "<group>"; };
+		491E136F1E87321500807FDE /* ImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
+		491E13701E87321500807FDE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		491E135D1E8731C600807FDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		491E13571E8731C600807FDE = {
+			isa = PBXGroup;
+			children = (
+				491E13621E8731C600807FDE /* GenerateAppIcons */,
+				491E13611E8731C600807FDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		491E13611E8731C600807FDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				491E13601E8731C600807FDE /* generate-app-icons */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		491E13621E8731C600807FDE /* GenerateAppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				491E136A1E87321500807FDE /* +NSImage.swift */,
+				491E136B1E87321500807FDE /* +NSSize.swift */,
+				491E136D1E87321500807FDE /* Image.swift */,
+				491E136F1E87321500807FDE /* ImageSize.swift */,
+				491E136E1E87321500807FDE /* imageSets.swift */,
+				491E136C1E87321500807FDE /* handleErrors.swift */,
+				491E13701E87321500807FDE /* main.swift */,
+			);
+			path = GenerateAppIcons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		491E135F1E8731C600807FDE /* GenerateAppIcons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491E13671E8731C600807FDE /* Build configuration list for PBXNativeTarget "GenerateAppIcons" */;
+			buildPhases = (
+				491E135C1E8731C600807FDE /* Sources */,
+				491E135D1E8731C600807FDE /* Frameworks */,
+				491E135E1E8731C600807FDE /* CopyFiles */,
+				491E13781E87324500807FDE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GenerateAppIcons;
+			productName = GenerateAppIcons;
+			productReference = 491E13601E8731C600807FDE /* generate-app-icons */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		491E13581E8731C600807FDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Saagar Jha";
+				TargetAttributes = {
+					491E135F1E8731C600807FDE = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 3493UDPWAK;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 491E135B1E8731C600807FDE /* Build configuration list for PBXProject "GenerateAppIcons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 491E13571E8731C600807FDE;
+			productRefGroup = 491E13611E8731C600807FDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				491E135F1E8731C600807FDE /* GenerateAppIcons */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		491E135C1E8731C600807FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491E13731E87321500807FDE /* handleErrors.swift in Sources */,
+				491E13771E87321500807FDE /* main.swift in Sources */,
+				491E13741E87321500807FDE /* Image.swift in Sources */,
+				491E13711E87321500807FDE /* +NSImage.swift in Sources */,
+				491E13751E87321500807FDE /* imageSets.swift in Sources */,
+				491E13761E87321500807FDE /* ImageSize.swift in Sources */,
+				491E13721E87321500807FDE /* +NSSize.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		491E13651E8731C600807FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		491E13661E8731C600807FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		491E13681E8731C600807FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 3493UDPWAK;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "generate-app-icons";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		491E13691E8731C600807FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 3493UDPWAK;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "generate-app-icons";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		491E135B1E8731C600807FDE /* Build configuration list for PBXProject "GenerateAppIcons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491E13651E8731C600807FDE /* Debug */,
+				491E13661E8731C600807FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		491E13671E8731C600807FDE /* Build configuration list for PBXNativeTarget "GenerateAppIcons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491E13681E8731C600807FDE /* Debug */,
+				491E13691E8731C600807FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 491E13581E8731C600807FDE /* Project object */;
+}
