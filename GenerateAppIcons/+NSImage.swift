@@ -11,12 +11,12 @@ import AppKit
 extension NSImage {
 	func resized(to size: NSSize, scalingBy scale: Int) -> NSImage? {
 		let scaledSize = size.scaled(by: scale)
-		guard let representation = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(scaledSize.width), pixelsHigh: Int(scaledSize.height), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: NSCalibratedRGBColorSpace, bytesPerRow: 0, bitsPerPixel: 0) else {
+		guard let representation = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(scaledSize.width), pixelsHigh: Int(scaledSize.height), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: .calibratedRGB, bytesPerRow: 0, bitsPerPixel: 0) else {
 			return nil
 		}
 		representation.size = size
 		NSGraphicsContext.saveGraphicsState()
-		NSGraphicsContext.setCurrent(NSGraphicsContext(bitmapImageRep: representation))
+		NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: representation)
 		draw(in: NSRect(origin: .zero, size: size), from: NSRect(origin: .zero, size: self.size), operation: .copy, fraction: 1)
 		NSGraphicsContext.restoreGraphicsState()
 		let image = NSImage(size: scaledSize)
@@ -29,8 +29,8 @@ extension NSImage {
 			return false
 		}
 		let representation = NSBitmapImageRep(data: tiffData)
-		let properties = [NSImageCompressionFactor: 1]
-		guard let pngData = representation?.representation(using: NSPNGFileType, properties: properties) else {
+		let properties = [NSBitmapImageRep.PropertyKey.compressionFactor: 1]
+		guard let pngData = representation?.representation(using: .png, properties: properties) else {
 			return false
 		}
 		do {
