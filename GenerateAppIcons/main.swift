@@ -15,6 +15,8 @@ let flags = Array(args[index..<args.endIndex])
 
 guard flags.count > 0 && arguments.count > 0 else {
 	printToError("Error: no image or image sets specified.")
+	printOptionsHeader()
+	printOptions()
 	exit(GAIError.noArguments.rawValue)
 }
 
@@ -40,6 +42,7 @@ for flag in flags {
 		force = true
 	case "-h":
 		printHeader()
+		printOptionsHeader()
 		printOptions()
 		exit(GAIError.success.rawValue)
 	case "-i":

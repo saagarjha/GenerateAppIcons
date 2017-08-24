@@ -25,6 +25,9 @@ func printToError(_ string: String = "") {
 
 func printHeader() {
 	printToError("A simple command line app icon generator")
+}
+
+func printOptionsHeader() {
 	printToError()
 	printToError("USAGE: generate-appicons option[s] iconfile [output=AppIcon.appiconset]")
 	printToError()
