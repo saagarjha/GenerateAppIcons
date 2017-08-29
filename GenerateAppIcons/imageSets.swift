@@ -35,6 +35,10 @@ let iPad32ImageSet = iPad7ImageSet + [
 
 let iPadImageSet = iPad7ImageSet
 
+let iOSMarketingImageSet = [
+	Image(size: .square(1024), scales: [1], idiom: "ios-marketing", role: nil, subtype: nil)
+]
+
 let appleWatch2ImageSet = [
 	Image(size: .square(24), scales: [2], idiom: "watch", role: "notificationCenter", subtype: "38mm"),
 	Image(size: .square(27.5), scales: [2], idiom: "watch", role: "notificationCenter", subtype: "42mm"),
@@ -49,3 +53,7 @@ let appleWatch1ImageSet = appleWatch2ImageSet + [
 ]
 
 let appleWatchImageSet = appleWatch2ImageSet
+
+let appleWatchMarketingImageSet = [
+	Image(size: .square(1024), scales: [1], idiom: "watch-marketing", role: nil, subtype: nil)
+]

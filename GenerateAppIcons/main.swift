@@ -51,6 +51,8 @@ for flag in flags {
 		imageSet.append(contentsOf: iPhone1ImageSet)
 	case "-i7":
 		imageSet.append(contentsOf: iPhone7ImageSet)
+	case "-im":
+		imageSet.append(contentsOf: iOSMarketingImageSet)
 	case "-p":
 		imageSet.append(contentsOf: iPadImageSet)
 	case "-p32":
@@ -63,6 +65,8 @@ for flag in flags {
 		imageSet.append(contentsOf: appleWatch1ImageSet)
 	case "-w2":
 		imageSet.append(contentsOf: appleWatch2ImageSet)
+	case "-wm":
+		imageSet.append(contentsOf: appleWatchMarketingImageSet)
 	default:
 		printToError("Invalid option. Valid options are:")
 		printOptions()
