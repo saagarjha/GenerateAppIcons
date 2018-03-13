@@ -13,25 +13,8 @@ let index = args.partition { $0.hasPrefix("-") }
 let arguments = Array(args[args.startIndex..<index])
 let flags = Array(args[index..<args.endIndex])
 
-guard flags.count > 0 && arguments.count > 0 else {
-	printToError("Error: no image or image sets specified.")
-	printOptionsHeader()
-	printOptions()
-	exit(GAIError.noArguments.rawValue)
-}
-
 var imagePath = ""
 var outputPath = "AppIcon.appiconset"
-
-switch arguments.count {
-case 2...Int.max:
-	outputPath = arguments[1]
-	fallthrough
-case 1:
-	imagePath = arguments[0]
-default:
-	break
-}
 
 var force = false
 var imageSet = [Image]()
@@ -74,8 +57,24 @@ for flag in flags {
 	}
 }
 
-let imageURL = URL(fileURLWithPath: NSString(string: imagePath).expandingTildeInPath)
-let outputURL = URL(fileURLWithPath: NSString(string: outputPath).expandingTildeInPath, isDirectory: true)
+switch arguments.count {
+case 2...:
+	outputPath = arguments[1]
+	fallthrough
+case 1:
+	imagePath = arguments[0]
+	fallthrough
+default:
+	if imagePath.isEmpty || flags.count <= 0 || imageSet.isEmpty {
+		printToError("Error: no image or image sets specified.")
+		printOptionsHeader()
+		printOptions()
+		exit(GAIError.noArguments.rawValue)
+	}
+}
+
+let imageURL = URL(fileURLWithPath: imagePath)
+let outputURL = URL(fileURLWithPath: outputPath, isDirectory: true)
 
 if FileManager.default.fileExists(atPath: outputURL.path) {
 	if force {
