@@ -14,11 +14,13 @@ let arguments = Array(args[args.startIndex..<index])
 let flags = Array(args[index..<args.endIndex])
 
 var imagePath = ""
-var outputPath = "AppIcon.appiconset"
 
 var force = false
 var imageSet = [Image]()
 
+var generatingMacImages = false
+
+flagParser:
 for flag in flags {
 	switch flag {
 	case "-f":
@@ -36,6 +38,10 @@ for flag in flags {
 		imageSet.append(contentsOf: iPhone7ImageSet)
 	case "-im":
 		imageSet.append(contentsOf: iOSMarketingImageSet)
+	case "-m":
+		imageSet = macImageSet
+		generatingMacImages = true
+		break flagParser
 	case "-p":
 		imageSet.append(contentsOf: iPadImageSet)
 	case "-p32":
@@ -55,6 +61,14 @@ for flag in flags {
 		printOptions()
 		exit(GAIError.invalidOption.rawValue)
 	}
+}
+
+var outputPath: String
+if generatingMacImages {
+	outputPath = "Icon.iconset"
+} else {
+	outputPath = "AppIcon.appiconset"
+
 }
 
 switch arguments.count {
@@ -100,7 +114,12 @@ var jsonImages = [[String: Any]]()
 
 for img in imageSet {
 	for scale in img.scales {
-		let fileName = "\(Int(img.size.width * Double(scale)))x\(Int(img.size.height * Double(scale))).png"
+		let fileName: String
+		if generatingMacImages {
+			fileName = "icon_\(Int(img.size.width))x\(Int(img.size.height))\(scale != 1 ? "@\(scale)x" : "").png"
+		} else {
+			fileName = "\(Int(img.size.width * Double(scale)))x\(Int(img.size.height * Double(scale))).png"
+		}
 		if let resizedImage = image?.resized(to: img.size.nsSize, scalingBy: scale),
 			resizedImage.saveAsPNG(to: outputURL.appendingPathComponent(fileName)) {
 			var jsonImage = [
@@ -124,10 +143,12 @@ for img in imageSet {
 
 json["images"] = jsonImages
 
-do {
-	let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-	let url = outputURL.appendingPathComponent("Contents.json")
-	try data.write(to: url)
-} catch _ {
-	printToError("Could not create \(outputPath).Contents.json, skipping…")
+if !generatingMacImages {
+	do {
+		let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+		let url = outputURL.appendingPathComponent("Contents.json")
+		try data.write(to: url)
+	} catch _ {
+		printToError("Could not create \(outputPath).Contents.json, skipping…")
+	}
 }

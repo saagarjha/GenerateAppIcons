@@ -29,7 +29,7 @@ func printHeader() {
 
 func printOptionsHeader() {
 	printToError()
-	printToError("USAGE: generate-appicons option[s] iconfile [output=AppIcon.appiconset]")
+	printToError("USAGE: generate-appicons option[s] iconfile [output=(App)Icon.(app)iconset]")
 	printToError()
 	printToError("OPTIONS:")
 }
@@ -40,6 +40,7 @@ func printOptions() {
 	printToError(" -i7   Generate iPhone icons for iOS 7+")
 	printToError(" -i1   Generate iPhone icons for iOS 1+")
 	printToError(" -im   Generate iOS marketing icons")
+	printToError(" -m    Generate macOS icons (disables other image sets)")
 	printToError(" -p    Generate iPad icons")
 	printToError(" -p7   Generate iPad icons for iOS 7+")
 	printToError(" -p32  Generate iPad icons for iOS 3.2+")

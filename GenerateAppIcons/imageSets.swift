@@ -20,6 +20,14 @@ let iPhone1ImageSet = iPhone7ImageSet + [
 
 let iPhoneImageSet = iPhone7ImageSet
 
+let macImageSet = [
+	Image(size: .square(16), scales: [1, 2], idiom: "", role: nil, subtype: nil),
+	Image(size: .square(32), scales: [1, 2], idiom: "", role: nil, subtype: nil),
+	Image(size: .square(128), scales: [1, 2], idiom: "", role: nil, subtype: nil),
+	Image(size: .square(256), scales: [1, 2], idiom: "", role: nil, subtype: nil),
+	Image(size: .square(512), scales: [1, 2], idiom: "", role: nil, subtype: nil),
+]
+
 let iPad7ImageSet = [
 	Image(size: .square(20), scales: [1, 2], idiom: "ipad", role: nil, subtype: nil),
 	Image(size: .square(29), scales: [1, 2], idiom: "ipad", role: nil, subtype: nil),
